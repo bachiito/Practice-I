@@ -1,0 +1,195 @@
+:root {
+  --heading-clr: hsl(219, 100%, 78%);
+  --text-clr: hsl(120, 4%, 95%);
+  --background-clr: hsl(0, 0%, 11%);
+  --card-clr: hsl(243, 100%, 69%);
+}
+
+/* ==============
+  CSS RESET
+============== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* ==============
+    Typography
+============== */
+
+.title {
+  color: var(--heading-clr);
+  text-align: center;
+  margin: 0;
+}
+
+h2.title {
+  text-align: left;
+  margin-top: 2em;
+}
+
+.text {
+  color: var(--text-clr);
+  font-size: 1.125rem;
+}
+
+.exercises__item {
+  padding-inline-start: 0.5em;
+  margin-block-start: 0.5em;
+}
+
+.exercises__item::marker {
+  content: "📚";
+}
+
+.exercises__link {
+  color: var(--text-clr);
+  text-decoration: none;
+  text-underline-offset: 0.15em;
+}
+
+.exercises__link:hover {
+  text-decoration: underline;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.highlight {
+  color: var(--heading-clr);
+}
+
+.underline {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  padding: 0.5em 1em;
+  margin-block-start: 3em;
+  border: none;
+  border-radius: 0.5em;
+  background-color: var(--text-clr);
+
+  color: var(--background-clr);
+  font-family: monospace;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+
+  transition: all 0.5s ease;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  outline: 0;
+  box-shadow: 0 0 0 4px var(--background-clr), 0 0 0 6px var(--text-clr);
+}
+
+th,
+td {
+  text-align: center;
+  padding: 0.75em;
+  border: 1px solid var(--text-clr);
+}
+
+.card__title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-align: center;
+  margin-block-start: 0.75em;
+  margin-block-end: 0;
+}
+
+.card__subtitle {
+  font-size: 1.125rem;
+  font-family: cursive;
+  text-align: center;
+  margin-block-start: 0;
+}
+
+/* ==============
+  Layout
+============== */
+
+.flex-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background-clr);
+}
+
+.container {
+  width: min(50rem, 100% - 2rem);
+  margin-inline: auto;
+  margin-block-start: 3rem;
+}
+
+.exercises-list {
+  font-size: 1.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.table-planets {
+  border: 2px solid var(--text-clr);
+  border-collapse: collapse;
+  margin-block-start: 2rem;
+  margin-inline: auto;
+}
+
+.table-head-planets {
+  border-block-end: 2px dotted var(--text-clr);
+}
+
+.card {
+  padding: 2rem;
+  margin-block-start: 2rem;
+  border-radius: 1rem;
+  background-image: linear-gradient(
+    120deg,
+    var(--card-clr),
+    var(--heading-clr)
+  );
+  transition: all 0.75s ease;
+}
+
+.card:hover {
+  cursor: pointer;
+  scale: 1.005;
+  box-shadow: 0 0 0.5rem 0 var(--card-clr);
+}
+
+.card__img {
+  width: 25%;
+  margin-inline: auto;
+}
